@@ -75,9 +75,9 @@ export default function sortCollection() {
       .call(e)
       .sort(function(a, b) {
         if (sortArray[sortArrayIndex][1] === 'desc') {
-          return a.dataset[sortArray[sortArrayIndex][0]].localeCompare(b.dataset[sortArray[sortArrayIndex][1]]);
+          return a.dataset[sortArray[sortArrayIndex][0]].localeCompare(b.dataset[sortArray[sortArrayIndex][0]]);
         } else {
-          return b.dataset[sortArray[sortArrayIndex][0]].localeCompare(a.dataset[sortArray[sortArrayIndex][1]]);
+          return b.dataset[sortArray[sortArrayIndex][0]].localeCompare(a.dataset[sortArray[sortArrayIndex][0]]);
         }
       })
       .forEach(function(val, index) {
